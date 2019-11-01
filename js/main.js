@@ -1,5 +1,23 @@
+//variables
+
+
+//constants
 
 
 
+//event listeners
 
-console.log("HOWDY!");
+
+
+//cache
+
+
+
+//arrays
+
+
+
+//functions
+
+
+
