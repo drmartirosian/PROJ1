@@ -28,9 +28,9 @@ startBtn.addEventListener('click', endGame);
 
 //----------------------functions------------------//
 //ENTER INPUT INFO
-function fn1() {
+function textBox() {
     var userInput = document.getElementById('text1').value;
-    list.append('value: ' + userInput);
+    list.append("<li>" + userInput + "</li>");
 };
 
 
