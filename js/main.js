@@ -11,16 +11,12 @@ var inputBox = [];
 
 //--------------------events
 // var nameHere = document.getElementById('id here');
-
 var startBtn = document.getElementById('start');
-var enterBtn = document.getElementById('enter');
-var inputBox = document.getElementById('input');
+
+
 
 //--------------------listeners
 // object.addEventListener(event, function)
-enterBtn.addEventListener('click', enter);
-inputBox.addEventListener('click', input);
-
 startBtn.addEventListener('click', levelZero);
 startBtn.addEventListener('click', levelOne);
 startBtn.addEventListener('click', levelTwo);
@@ -32,14 +28,11 @@ startBtn.addEventListener('click', endGame);
 
 //----------------------functions------------------//
 //ENTER INPUT INFO
-function enter() {
-    console.log('ENTER BUTTON WORKS');
+function fn1() {
+    var userInput = document.getElementById('text1').value;
+    list.append('value: ' + userInput);
 };
 
-//INPUT BOX
-function input() {
-    console.log('PUSH THIS TO MESSAGE');
-};
 
 // LEVEL ZERO
 function levelZero() {
@@ -55,7 +48,7 @@ function levelZero() {
 // LEVEL1
 function levelOne(){
     if (levelArray.length == 1) {
-        message.textContent = 'level 1: Where to start...?';
+        message.textContent = 'LEVEL 1: Where to start...?';
     };
 };
 
@@ -63,7 +56,7 @@ function levelOne(){
 //LEVEL2 
 function levelTwo(){
     if (levelArray.length == 2) {
-        message.textContent = 'level 2: working title';
+        message.textContent = 'LEVEL 2: working title';
     };
 };
 
@@ -71,7 +64,7 @@ function levelTwo(){
 //LEVEL3
 function levelThree(){
     if (levelArray.length == 3) {
-        message.textContent = 'level 3: working title';
+        message.textContent = 'LEVEL 3: working title';
     };
 };
 
@@ -80,7 +73,7 @@ function levelThree(){
 function endGame(){
     if (levelArray.length == 4) {
         document.getElementById('start').disabled = true;
-        message.textContent = 'Game Finished! ...Play Again?';
+        message.textContent = 'Game End! ...Play Again?';
     };
 };
 //-------------------LEVELS END-----------------//
