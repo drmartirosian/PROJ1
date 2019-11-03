@@ -3,10 +3,9 @@
 
 //---------------constants
 var levelArray = [];
+var inputBox = [];
 
 //----------------------arrays
-var level = 1;
-
 
 //---------------cache (what changes)
 
@@ -19,6 +18,8 @@ var inputBox = document.getElementById('input');
 
 //--------------------listeners
 // object.addEventListener(event, function)
+enterBtn.addEventListener('click', enter);
+inputBox.addEventListener('click', input);
 
 startBtn.addEventListener('click', levelZero);
 startBtn.addEventListener('click', levelOne);
@@ -26,25 +27,10 @@ startBtn.addEventListener('click', levelTwo);
 startBtn.addEventListener('click', levelThree);
 startBtn.addEventListener('click', endGame);
 
-enterBtn.addEventListener('click', enter);
-inputBox.addEventListener('click', input);
+
 
 
 //----------------------functions------------------//
-// NEXT LEVEL
-function levelZero() {
-    //number of levels implimented: 3
-    if (levelArray.length !== 4) {
-        levelArray.push(1);
-        // console.log(levelArray);
-    }
-    //game ends at 'level': 4
-    if (levelArray.length >= 4) {
-        // console.log('Level: ' + 'game over x...');
-    }
-};
-
-
 //ENTER INPUT INFO
 function enter() {
     console.log('ENTER BUTTON WORKS');
@@ -55,35 +41,46 @@ function input() {
     console.log('PUSH THIS TO MESSAGE');
 };
 
+// LEVEL ZERO
+function levelZero() {
+    //number of levels implimented: 3
+    if (levelArray.length !== 4) {
+        levelArray.push(1);
+    }
+    //game ends at 'level': 4
+    if (levelArray.length >= 4) {
+    }
+};
 
-//------------------LEVEL FUNCTIONS---------------//
+// LEVEL1
 function levelOne(){
     if (levelArray.length == 1) {
-        console.log('level 1: Where to start...?');
+        message.textContent = 'level 1: Where to start...?';
     };
 };
 
 
+//LEVEL2 
 function levelTwo(){
     if (levelArray.length == 2) {
-        console.log('level 2: working title');
+        message.textContent = 'level 2: working title';
     };
 };
 
 
+//LEVEL3
 function levelThree(){
     if (levelArray.length == 3) {
-        console.log('level 3: working title');
+        message.textContent = 'level 3: working title';
     };
 };
 
 
+//END GAME
 function endGame(){
     if (levelArray.length == 4) {
         document.getElementById('start').disabled = true;
-        console.log('Game over...');
+        message.textContent = 'Game Finished! ...Play Again?';
     };
 };
-
-console.log('Level ' + levelArray.length + ': before we begin...');
 //-------------------LEVELS END-----------------//
