@@ -1,7 +1,7 @@
-//---------------variables
+//---------------variables-------------------------
 
 
-//---------------constants-----------------------------
+//---------------constants-------------------------
 const levelArray = [];
 // const userArray = []; //for user answers
 
@@ -11,16 +11,31 @@ const levelArray = [];
 //start button
 var startBtn = document.getElementById('start');
 
+
+
+
 //ALLOWS USER TO INPUT MESSAGES
 function textBox() {
     var ul = document.getElementById('myUl');
     var input1 = document.getElementById('input1');
     var li = document.createElement('li');
+
     li.setAttribute('id', input1.value);
     li.appendChild(document.createTextNode('USER: ' + input1.value));
     ul.appendChild(li);
 };
 
+
+
+//allows fehler input messages
+// var fehlerSays() {
+//     for (var i = 0; i < ul.length; i++) {
+//         var ul = document.getElementById('myUl');
+//         var li = document.createElement('li');
+//         li.appendChild(document.createTextNode(name));
+//         ul.appendChild(li);
+//     }
+// };
 
 //--------------------listeners--------------------------
 // object.addEventListener(event, function)
@@ -32,14 +47,11 @@ startBtn.addEventListener('click', levelThree);
 
 //----------------------functions------------------//
 
-
-
-
 // LEVEL ZERO
 function levelZero() {
     if (levelArray.length !== 4) { 
         levelArray.push(1); 
-
+        //Opening FEHLER message 
     }
     if (levelArray.length >= 4) { 
     document.getElementById('start');
@@ -48,8 +60,6 @@ function levelZero() {
     }
     console.log(levelArray.length);
 };
-
-
 
 // LEVEL1
 function levelOne(){
@@ -61,17 +71,26 @@ function levelOne(){
 };
 //SOLUTION => "document.getElementById('start').disabled = false;"
 
-
 //LEVEL2 
 function levelTwo(){
     if (levelArray.length == 2) {
-        message.textContent = 'LEVEL 2: working title';
+        message.textContent = 'LEVEL 2: Oops...';
         start.innerHTML = 'START';
+
         var startRemove = document.getElementById('start');
         startRemove.remove();
     };
 };
+//SOLUTION =>
+// function addElement(parentId, elementTag, elementId, html) {
+//     var p = document.getElementById('body');
+//     var newElement = document.createElement('button');
 
+//     newElement.setAttribute('start', elementId);
+//     newElement.innerHTML = 'START';
+
+//     p.appendChild(newElement);
+// };
 
 //LEVEL3
 function levelThree(){
