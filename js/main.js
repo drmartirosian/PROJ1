@@ -1,24 +1,24 @@
 //---------------variables-------------------------
 
-
 //---------------constants-------------------------
 const levelArray = [];
 // const userArray = []; //for user answers
 
-
 //--------------------events-----------------------
 // var nameHere = document.getElementById('id here');
+
 //start button
 var startBtn = document.getElementById('start');
 
 
-
-
 //ALLOWS USER TO INPUT MESSAGES
 function textBox() {
-    var ul = document.getElementById('myUl');
-    var input1 = document.getElementById('input1');
+    //li variable
     var li = document.createElement('li');
+    //User comments section
+    var ul = document.getElementById('myUl');
+    //user inputs
+    var input1 = document.getElementById('input1');
 
     li.setAttribute('id', input1.value);
     li.appendChild(document.createTextNode('USER: ' + input1.value));
@@ -43,65 +43,70 @@ startBtn.addEventListener('click', levelZero);
 startBtn.addEventListener('click', levelOne);
 startBtn.addEventListener('click', levelTwo);
 startBtn.addEventListener('click', levelThree);
+startBtn.addEventListener('click', endGame);
 
 
 //----------------------functions------------------//
 
 // LEVEL ZERO
 function levelZero() {
+    //initial game
     if (levelArray.length !== 4) { 
         levelArray.push(1); 
-        //Opening FEHLER message 
-    }
-    if (levelArray.length >= 4) { 
-    document.getElementById('start');
-    document.getElementById('start').disabled = true;
-    message.textContent = 'Game End! ...Play Again?';
+        //Opening FEHLER message
     }
     console.log(levelArray.length);
 };
+
 
 // LEVEL1
 function levelOne(){
     if (levelArray.length == 1) {
         message.textContent = 'LEVEL 1: Where to start...?';
-        start.innerHTML = '404 ERROR';
-        document.getElementById('start').disabled = true;
+        // start.innerHTML = '404 ERROR';
+        // document.getElementById('start').disabled = true;
     };
+//SOLUTION => 
+//"document.getElementById('start').disabled = false;"
 };
-//SOLUTION => "document.getElementById('start').disabled = false;"
+
 
 //LEVEL2 
 function levelTwo(){
     if (levelArray.length == 2) {
         message.textContent = 'LEVEL 2: Oops...';
-        start.innerHTML = 'START';
-
-        var startRemove = document.getElementById('start');
-        startRemove.remove();
+        // start.innerHTML = 'START';
+        // var startRemove = document.getElementById('start');
+        // startRemove.remove();
     };
-};
 //SOLUTION =>
-// function addElement(parentId, elementTag, elementId, html) {
-//     var p = document.getElementById('body');
-//     var newElement = document.createElement('button');
+// document.body.innerHTML += '<button>START</button>';
+// $0.id='start';
+};
 
-//     newElement.setAttribute('start', elementId);
-//     newElement.innerHTML = 'START';
-
-//     p.appendChild(newElement);
-// };
 
 //LEVEL3
 function levelThree(){
     if (levelArray.length == 3) {
         message.textContent = 'LEVEL 3: working title';
+        // document.getElementById('start').id='tart';
     };
+//SOLUTION
+// document.getElementById('tart').id='start'
 };
+
+
+//END GAME
+function endGame(){
+    if (levelArray.length >= 4) { 
+        document.getElementById('start');
+        document.getElementById('start').disabled = true;
+        message.textContent = 'Game End! ...Play Again?';
+    }
+};
+
 
 
 console.log(levelArray.length);
 //-------------------LEVELS END-----------------//
 
-// document.getElementById('start').id='tart'
-// document.getElementById('start').disabled = true;
