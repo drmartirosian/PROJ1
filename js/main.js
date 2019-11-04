@@ -1,38 +1,38 @@
 //---------------variables
 
 
-//---------------constants
-var levelArray = [];
-var inputBox = [];
+//---------------constants-----------------------------
+const levelArray = [];
+const userArray = [];
 
-//----------------------arrays
 
-//---------------cache (what changes)
-
-//--------------------events
+//--------------------events-----------------------
 // var nameHere = document.getElementById('id here');
+//start button
 var startBtn = document.getElementById('start');
 
+//ENTER INPUT INFO
+function textBox() {
+    var ul = document.getElementById('myUl');
+    var input1 = document.getElementById('input1');
+    var li = document.createElement('li');
+    li.setAttribute('id', input1.value);
+    li.appendChild(document.createTextNode('USER: ' + input1.value));
+    ul.appendChild(li);
+};
 
 
-//--------------------listeners
+//--------------------listeners--------------------------
 // object.addEventListener(event, function)
 startBtn.addEventListener('click', levelZero);
 startBtn.addEventListener('click', levelOne);
 startBtn.addEventListener('click', levelTwo);
 startBtn.addEventListener('click', levelThree);
-startBtn.addEventListener('click', endGame);
-
-
 
 
 //----------------------functions------------------//
-//ENTER INPUT INFO
-function textBox() {
-    var userInput = document.getElementById('text1').value;
-    list.append("<li>" + userInput + "</li>");
-};
 
+console.log(levelArray.length);
 
 // LEVEL ZERO
 function levelZero() {
@@ -42,13 +42,19 @@ function levelZero() {
     }
     //game ends at 'level': 4
     if (levelArray.length >= 4) {
+    document.getElementById('start');
+    message.textContent = 'Game End! ...Play Again?';
     }
+    console.log(levelArray.length);
 };
+
+
 
 // LEVEL1
 function levelOne(){
     if (levelArray.length == 1) {
         message.textContent = 'LEVEL 1: Where to start...?';
+        // document.getElementById('start').id='broken-start-button'
     };
 };
 
@@ -69,11 +75,5 @@ function levelThree(){
 };
 
 
-//END GAME
-function endGame(){
-    if (levelArray.length == 4) {
-        document.getElementById('start').disabled = true;
-        message.textContent = 'Game End! ...Play Again?';
-    };
-};
+
 //-------------------LEVELS END-----------------//
