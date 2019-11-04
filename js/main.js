@@ -3,7 +3,7 @@
 
 //---------------constants-----------------------------
 const levelArray = [];
-const userArray = [];
+// const userArray = []; //for user answers
 
 
 //--------------------events-----------------------
@@ -11,7 +11,7 @@ const userArray = [];
 //start button
 var startBtn = document.getElementById('start');
 
-//ENTER INPUT INFO
+//ALLOWS USER TO INPUT MESSAGES
 function textBox() {
     var ul = document.getElementById('myUl');
     var input1 = document.getElementById('input1');
@@ -32,17 +32,18 @@ startBtn.addEventListener('click', levelThree);
 
 //----------------------functions------------------//
 
-console.log(levelArray.length);
+
+
 
 // LEVEL ZERO
 function levelZero() {
-    //number of levels implimented: 3
-    if (levelArray.length !== 4) {
-        levelArray.push(1);
+    if (levelArray.length !== 4) { 
+        levelArray.push(1); 
+
     }
-    //game ends at 'level': 4
-    if (levelArray.length >= 4) {
+    if (levelArray.length >= 4) { 
     document.getElementById('start');
+    document.getElementById('start').disabled = true;
     message.textContent = 'Game End! ...Play Again?';
     }
     console.log(levelArray.length);
@@ -54,15 +55,20 @@ function levelZero() {
 function levelOne(){
     if (levelArray.length == 1) {
         message.textContent = 'LEVEL 1: Where to start...?';
-        // document.getElementById('start').id='broken-start-button'
+        start.innerHTML = '404 ERROR';
+        document.getElementById('start').disabled = true;
     };
 };
+//SOLUTION => "document.getElementById('start').disabled = false;"
 
 
 //LEVEL2 
 function levelTwo(){
     if (levelArray.length == 2) {
         message.textContent = 'LEVEL 2: working title';
+        start.innerHTML = 'START';
+        var startRemove = document.getElementById('start');
+        startRemove.remove();
     };
 };
 
@@ -75,5 +81,8 @@ function levelThree(){
 };
 
 
-
+console.log(levelArray.length);
 //-------------------LEVELS END-----------------//
+
+// document.getElementById('start').id='tart'
+// document.getElementById('start').disabled = true;
