@@ -7,6 +7,7 @@ body {
     text-align: center;
     align-content: center;
     display: grid;
+    background-color: lightgreen;
 }
 h1, #image, #message, #enter, #start, #input1, #textbox, #ad {
     border: 1px solid black;
@@ -42,12 +43,16 @@ h1{
     font-weight: bold; 
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    width: 400px;
+    width: 300px;
+    height: 100px;
+    align-items: center;
+    padding: 50px;
+    background-color: white;
 }
 #image { 
     grid-column: 2 / 3;
     grid-row: 3 / 4;
-    width: 400px;
+    width: 300px;
     background-color: paleturquoise;
 }
 #start {
@@ -57,7 +62,7 @@ h1{
     font-size: 20px; 
     grid-column: 2 / 3;
     grid-row: 4 / 6;
-    width: 400px;
+    width: 300px;
 }
 
 
@@ -98,4 +103,6 @@ li {
     background-color: orange;
     grid-column: 3 / 4;
     grid-row: 2 / 6;
+    width: 100%;
+    
 }
