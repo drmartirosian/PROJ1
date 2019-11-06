@@ -113,3 +113,10 @@ li {
     width: 100%;
     height: 650px;
 }
+
+
+@media only screen and (max-width: 720px) {
+    #ad {
+        display: none;
+    }
+}

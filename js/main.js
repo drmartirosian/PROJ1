@@ -1,4 +1,4 @@
-//---------------variables-------------------------
+//---------------variables(states)-------------------------
 
 //---------------ARRAYS-------------------------
 const levelArray = [];
@@ -15,15 +15,15 @@ var startBtn = document.getElementById('start');
 // object.addEventListener(event, function)
 startBtn.addEventListener('click', levelZero);
 startBtn.addEventListener('click', levelOne);
-startBtn.addEventListener('click', levelTwo);
-startBtn.addEventListener('click', levelThree);
+// startBtn.addEventListener('click', levelTwo);
+// startBtn.addEventListener('click', levelThree);
 startBtn.addEventListener('click', endGame);
 
 
 //----------------------------FUNCTIONS----------------------//
 // Makes start btn clicks +1 to array
 function levelZero() {
-    if (levelArray.length !== 4) { 
+    if (levelArray.length !== 2) { 
         levelArray.push(1); 
     }
     console.log(levelArray.length);
@@ -33,42 +33,43 @@ function levelZero() {
 function levelOne(){
     if (levelArray.length == 1) {
         message.textContent = 'LEVEL 1: Where to start...?';
-        start.innerHTML = '404 ERROR: Temp disabled...';
+        start.innerHTML = '404 ERROR: Btn disabled...';
         document.getElementById('start').disabled = true;
     };
 //SOLUTION => 
 //"document.getElementById('start').disabled = false;"
 };
 
-//-----------------------------LEVEL2------------------------- 
-function levelTwo(){
-    if (levelArray.length == 2) {
-        message.textContent = 'LEVEL 2: To Tart or Start?';
-        start.innerHTML = 'TART GAME!';
-        document.getElementById('start').id='tart';
-    };
-//SOLUTION
-// document.getElementById('tart').id='start'
-};
+// //-----------------------------LEVEL2------------------------- 
+// function levelTwo(){
+//     if (levelArray.length == 2) {
+//         message.textContent = 'LEVEL 2: To Tart or Start?';
+//         start.innerHTML = 'TART GAME!';
+//         document.getElementById('start').id='tart';
+//     };
+// //SOLUTION
+// // document.getElementById('tart').id='start'
+// };
 
-//----------------------------LEVEL3-----------------------------
-function levelThree(){
-    if (levelArray.length == 3) {
-        message.textContent = 'LEVEL 3: GONE!';
-        document.getElementById('start').remove();
-    };
-//SOLUTION =>
-// document.body.innerHTML += '<button>START</button>';
-// $0.id='start';
-};
+// //----------------------------LEVEL3-----------------------------
+// function levelThree(){
+//     if (levelArray.length == 3) {
+//         message.textContent = 'LEVEL 3: GONE!';
+//         document.getElementById('start').remove();
+//     };
+// //SOLUTION =>
+// // document.body.innerHTML += '<button>START</button>';
+// // $0.id='start';
+// };
 
 //-----------------------------ENDGAME----------------------------
 //END GAME
 function endGame(){
-    if (levelArray.length >= 4) { 
+    if (levelArray.length >= 2) { 
         document.getElementById('start');
+        start.innerHTML = 'START GAME! :D';
         document.getElementById('start').disabled = true;
-        message.textContent = 'Game End! ...Play Again?';
+        message.textContent = 'You SEI rock! Thanks!';
     }
 };
 
@@ -120,5 +121,3 @@ console.log(levelArray.length);
 //   } else {
 //     console.log('NOT GREEN!');
 //   }
-
-
