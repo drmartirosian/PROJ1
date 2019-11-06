@@ -34,6 +34,7 @@ function levelOne(){
     if (levelArray.length == 1) {
         message.textContent = 'LEVEL 1: Where to start...?';
         start.innerHTML = '404 ERROR: Btn disabled...';
+        document.getElementById('start').style.opacity = 0.4;
         document.getElementById('start').disabled = true;
     };
 //SOLUTION => 
@@ -67,7 +68,8 @@ function levelOne(){
 function endGame(){
     if (levelArray.length >= 2) { 
         document.getElementById('start');
-        start.innerHTML = 'START GAME! :D';
+        start.innerHTML = 'START GAME!';
+        document.getElementById('start').style.opacity = 1;
         document.getElementById('start').disabled = true;
         message.textContent = 'You SEI rock! Thanks!';
     }
