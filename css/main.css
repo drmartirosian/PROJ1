@@ -134,12 +134,25 @@ border-radius: 5px;
 }
 
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 500px) {
     #ad {
         display: none;
     }
     h1{
         display: none;  
+    }
+    #box2 {
+        font-size: 10px;
+        margin-left: 10%;
+        font-weight: bold;
+    }
+    #start {
+        font-size: 10px;
+        margin-left: 100%;
+        margin-top: 
+    }
+    #box3 {
+        margin-top: 10%;
     }
 
 }
