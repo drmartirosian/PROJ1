@@ -1,31 +1,20 @@
 *{
     box-sizing: border-box;
 }
-
-
 body {
-    text-align: center;
-    align-content: center;
+    height: 100vh;
+    margin: 0;
+    color: black;
+    font-family: Helvetica;
     display: grid;
-    background-color: lightgreen;
+    background-color: lightslategray;
 }
-h1, #LOGO, #message, #enter, #start, #input1, #textbox, #ad {
+
+/* h1, nav, #box1, #box2, #box3, #box4, #box5 {
     border: 1px solid black;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    display: flex;
-}
+} */
+#logo{
 
-
-
-
-h1{
-    color: white;    
-    background-color: silver;
-    grid-column: 1 / 4;
-    grid-row: 1 / 2;
-    width: 100%px;
-    
 }
 #blinking{
     animation:blinkingText 0.8s infinite;
@@ -35,98 +24,122 @@ h1{
     100%{   color: transparent;}
 }
 
-
-
-#LOGO { 
-    height: 100px;
-    width: 70%;
-    opacity: 0.3;
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
+h1 {
+    display: flex;
+    padding-inline-end: 30px;
+    padding-inline-start: 30px;
+    font-size: 40px;
+    margin: 0;
+    width: 300px;
+    grid-row: 1 / 2;
+    background-color: white;
 }
-#message {
-    color: purple;
-    font-size: 15px;
-    font-weight: bold; 
-    width: 83%;
-    height: 100px;
+nav {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding-left: 30%;
-    background-color: white;    
+    padding-inline-end: 30px;
+    padding-inline-start: 30px;
+    font-size: 15px;
+    font-weight: bolder;
+    grid-column: 1 / 4;
+    background-color: white;
+}
+
+#box1 {
+    display: flex;
+    grid-column: 1 / 2;
+    height: 300px;
+    width: 300px;
+    font-size: 15px;
+    background-color: black;
+    color: white;    
+    border-radius: 4px;
+    margin-bottom: -40%;
+    margin-top: 20%;
+    margin-left: 2%;
+}
+
+#box2 {
+    display: flex;
     grid-column: 2 / 3;
-    grid-row: 3 / 4;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    width: 70%;
+    height: 20%;
+    background-color: lightseagreen;
+    color: white;
+    margin-top: 60%;
+    margin-left: -10%;
+}
+
+#box3 {
+    display: flex;
+    grid-column: 1 / 2;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 70px;
+    background-color: white;
+    border: 2px solid black;
+    margin-left: 2%;
+}
+#input {
+font-size: 20px;
+}
+#enter {
+font-size: 20px;
+color: white;
+background-color: red;
+border-radius: 5px;
+}
+#enter:hover {
+    color: white;
+    background-color: rgb(255, 121, 121);  
+}
+
+
+#box4 {
+    display: flex;
+    grid-column: 2 / 3;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    width: 50%;
+    height: 35%;
 }
 #start {
-    color: white;
     background-color: green;
-    width: 70%;
-    justify-content: center;
-    font-size: 20px; 
-    grid-column: 2 / 3;
-    grid-row: 4 / 5;
-}
-
-
-
-
-#myUl{
-    text-align: left; 
-    grid-column: 1 / 2;
-    grid-row: 2 / 4; 
-    height: 400px;
-    width: 300px;
-    border: 1px solid black;
-    background-color: black;
-    color: white;
-    margin-bottom: 0;
-
-}
-li {
-    text-align: left;
-}
-#input1 {
-    color: purple;
-    font-size: 20px;
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
-    width: 300px;
-    margin-top: 0;
-}
-#enter{
-    background-color: red; 
     color: white;
     font-size: 20px;
-    grid-column: 1 / 2;
-    grid-row: 5 / 6;
-    width: 300px;
-    margin-bottom: 100px;
-
+    height: 50px;
+    border-radius: 5px;
+}
+#start:hover {
+    color: black;
+    background-color: greenyellow;  
 }
 
-
-
-#ad {
-    background-color: orange;
+#box5 {
+    display: flex;
     grid-column: 3 / 4;
-    grid-row: 2 / 6;
+    grid-row: 3 / 5;
     width: 100%;
-    height: 650px;
+    height: 100%;
+    margin-bottom: -40%;
 }
+#ad {
+    width: 100%;
+}
+
+
 @media only screen and (max-width: 720px) {
     #ad {
         display: none;
     }
-    #LOGO { 
-        display: none;
+    h1{
+        display: none;  
     }
-    #message {
-        padding-left: 15%;
-    }
+
 }
-
-/* #nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-} */
-

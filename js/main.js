@@ -1,7 +1,7 @@
 //---------------variables(states)-------------------------
 
 //---------------ARRAYS-------------------------
-const levelArray = [];
+const levelArray = []; 
 
 // const userArray = []; //for user answers
 
@@ -80,13 +80,13 @@ function endGame(){
 function textBox() {
     var li = document.createElement('li');
     var ul = document.getElementById('myUl');
-    var input1 = document.getElementById('input1');
-    li.setAttribute('id', input1.value);
-    li.appendChild(document.createTextNode('USER: ' + input1.value));
+    var input = document.getElementById('input');
+    li.setAttribute('id', input.value);
+    li.appendChild(document.createTextNode('USER: ' + input.value));
     ul.appendChild(li);
     //SEND TO REAL CONSOLE...
-    eval(input1.value)
-    console.log(`this is the code as a string ${input1.value}`);
+    eval(input.value)
+    // console.log(`this is the code as a string ${input.value}`);
 };
 
 
