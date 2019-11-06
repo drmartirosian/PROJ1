@@ -133,7 +133,11 @@ border-radius: 5px;
     width: 100%;
 }
 
-
+@media only screen and (max-height: 350px) {
+    nav {
+        display: none;
+    }
+}
 @media only screen and (max-width: 500px) {
     #ad {
         display: none;
@@ -152,7 +156,13 @@ border-radius: 5px;
         margin-top: 
     }
     #box3 {
-        margin-top: 10%;
+        margin-top: 0;
     }
-
+    #input {
+        width: 120px;
+        margin-bottom: 0;
+    }
+    #box1 {
+        height: 250px;
+    }
 }
