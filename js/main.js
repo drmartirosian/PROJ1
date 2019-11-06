@@ -82,7 +82,8 @@ function textBox() {
     li.appendChild(document.createTextNode('USER: ' + input1.value));
     ul.appendChild(li);
     //SEND TO REAL CONSOLE...
-    console.log(`${input1.value}`);
+    eval(input1.value)
+    console.log(`this is the code as a string ${input1.value}`);
 };
 
 
@@ -94,6 +95,15 @@ function textBox() {
 //         li.appendChild(document.createTextNode(name));
 //         ul.appendChild(li);
 //     }
+    // if (userArray === 'Y') {
+        
+    // }
+    // if () {
+
+    // }
+    // if () {
+
+    // }
 // };
 //--------------------------------------------------------------------
 console.log(levelArray.length);
