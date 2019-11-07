@@ -5,54 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>BOILERPLATE</title>
+    <title>aDom's Debugger</title>
     <script defer src="js/main.js"></script>
     <link href="css/main.css" rel="stylesheet" type="text/css"/>
 </head>
+<body>
+    <container>
+        <div id='box' class='box1'>  
+            <h1 id='message'>Level:<span></span></h1>
+        </div>
 
+        <div id='box' class='box2'>
+            <nav id="nav1">
+                <div href="">HOME</div>
+                <div>GUIDE</div>
+                <div>WALKTHRU</div>
+                <div>ABOUT</div>
+                <div>LOGIN</div>
+            </nav>
+        </div>
 
+      
+        <div id='box' class='box3'>
+            <ul id="myUl">
+                <li>aDom: Welcome back, USER.</li>
+                <li>aDom: Use my console as you wish.</li>
+                <li>aDom: WARNING: this is a WORKING/LIVE console! Input commands at your own risk!</li>
+                <li>aDom: Begin by clicking the "start" button.</li>
+            </ul>  
+            <input id='input' type=text placeholder='Input here...'>
+            <button id="enter" onclick='textBox()'>ENTER</button>
+        </div>
 
-
-
-
-<body id="body">
-
-    <h1 id="logo"><span id="blinking">a</span>Dom's Debugger</h1> 
-
-    <nav id="nav1">
-        <div href="">HOME</div>
-        <div>GUIDE</div>
-        <div>WALKTHRU</div>
-        <div>ABOUT</div>
-        <div>LOGIN</div>
-    </nav>
-
-
-    <box1 id="box1">
-        <ul id="myUl">
-            <li>aDom: Welcome back, USER.</li>
-            <li>aDom: Use my console as you wish.</li>
-            <li>aDom: WARNING: this is a WORKING/LIVE console! Input commands at your own risk!</li>
-            <li>aDom: Begin by clicking the "start" button.</li>
-        </ul>  
-        
-    </box1>
-
-
-    <box2 id="box2" ><message id="message">SEI Rocks!</message></box2>
-
-
-    <box3 id="box3" >
-        <input id='input' type=text placeholder='Input here...'>
-        <button id="enter" onclick='textBox()'>ENTER</button>
-    </box3>
-
-
-    <box4 id="box4" ><button id="start">START GAME!</button></box4>
-    
-    <box5 id="box5" ><img id="ad" src='https://i.imgur.com/hA7pioQ.png' alt='ADD HERE'></img></box5>
-    
-
-    
+        <div id='box' class='box4'>
+            <button id='start'>START</button>
+        </div>
+        <div id='box' class='box5'>
+            <img id="ad" alt='ADD HERE'></img>
+        </div>
+    </container>
 </body>
 </html>
