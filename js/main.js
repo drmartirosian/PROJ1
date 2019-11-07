@@ -3,7 +3,7 @@ var num;
 //----------------CACHE-------------------------//
 var displayEl = document.querySelector('h1 span');
 //----------------EVENT LISTENERS---------------//
-document.querySelector('button').addEventListener('click', function() {
+document.getElementById('start').addEventListener('click', function() {
     num = num+1;
     render();
 });
@@ -25,7 +25,7 @@ function lvlOne(){
     if (num === 1) {
         // console.log('LVL1 FIRED');
         message.textContent = 'LEVEL 1: Where to start...?';
-        start.innerHTML = '404 ERROR: Btn disabled...';
+        start.innerHTML = '404 ERROR: btn disabled...';
         document.getElementById('start').style.opacity = 0.4;
         document.getElementById('start').disabled = true;
     }
@@ -33,8 +33,8 @@ function lvlOne(){
 function lvlTwo(){
     if (num === 2) {
         // console.log('LVL2 FIRED');
-        message.textContent = 'LEVEL 2: Make it stop...';
-        start.innerHTML = 'DOH!';
+        message.textContent = 'LEVEL 2: Make it stop!!!';
+        start.innerHTML = ':(';
         document.getElementById('start').style.opacity = 1;
     }
 };
