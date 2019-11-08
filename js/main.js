@@ -1,12 +1,65 @@
 //----------------STATES------------------------//
 var num;
+var col = document.getElementById('start');
+col.style.backgroundColor = 'green'
+console.log(num)
 //----------------CACHE-------------------------//
 var displayEl = document.querySelector('h1 span');
 //----------------EVENT LISTENERS---------------//
 document.getElementById('start').addEventListener('click', function() {
     num = num+1;
     render();
+    console.log(num)
 });
+//---------------LEVEL FUNCTIONS-------------------//
+function lvlOne(){
+    var col = document.getElementById('start');
+    if (num === 1) {
+        message.textContent = 'LEVEL 1: Where to start...?';
+        start.innerHTML = '404 ERROR: btn disabled...';
+        col.style.backgroundColor = 'red'
+        document.getElementById('start').disabled = true;
+    }
+};
+function lvlTwo() {
+    if (num === 2 && col.style.backgroundColor === 'green') {
+        message.textContent = 'LEVEL 2: Are we there yet...?';
+        start.innerHTML = 'Start: Red? Why no Green?!';
+        document.getElementById('start').disabled = false;
+    } 
+    if (num === 2 && col.style.backgroundColor === 'red') {
+        message.textContent = 'LEVEL 2: Are we there yet...?';
+        start.innerHTML = 'Start: Red? Why no Green?!';
+        document.getElementById('start').disabled = true;
+    } 
+};
+function lvlThree(){
+    if (num === 3) {
+        message.textContent = 'LEVEL 3: Ghost button!';
+        start.innerHTML = 'WhooOOooOOO!';
+        document.getElementById('start').style.opacity = 0.4;
+        document.getElementById('start').style.backgroundColor = 'green';
+        document.getElementById('start').disabled=false;
+    }
+};
+function endFunction(){
+    if (num === 4) {
+        message.textContent = 'Yay! NOW you can start!';
+        start.innerHTML = 'END...';
+        document.getElementById('start').style.opacity = 1;
+        document.getElementById('start').disabled = true;
+    }
+};
+//-----------------CHATBOT/TERMINAL----------------//
+function textBox() {
+    var li = document.createElement('li');
+    var ul = document.getElementById('myUl');
+    var input = document.getElementById('input');
+    li.setAttribute('id', input.value);
+    li.appendChild(document.createTextNode('USER: ' + input.value));
+    ul.appendChild(li);
+    eval(input.value)
+};
 //---------------RENDER/INIT---------------------//
 function init(){
     num = 0;
@@ -20,49 +73,4 @@ function render() {
     endFunction()
 } 
 init();
-//---------------LEVEL FUNCTIONS-------------------//
-function lvlOne(){
-    if (num === 1) {
-        // console.log('LVL1 FIRED');
-        message.textContent = 'LEVEL 1: Where to start...?';
-        start.innerHTML = '404 ERROR: btn disabled...';
-        document.getElementById('start').style.opacity = 0.4;
-        document.getElementById('start').disabled = true;
-    }
-};
-function lvlTwo(){
-    if (num === 2) { 
-        // console.log('LVL2 FIRED');
-        message.textContent = 'LEVEL 2: Make it stop!!!';
-        start.innerHTML = ':(';
-        document.getElementById('start').style.opacity = 1;
-    } 
-};
-function lvlThree(){
-    if (num === 3) {
-        // console.log('LVL3 FIRED');
-        message.textContent = 'LEVEL 3: *imagine message here*';
-        start.innerHTML = 'START GAME!';
-    }
-};
-//-----------------CHATBOT/TERMINAL----------------//
-//APPEND USER COMMUNICATIONS
-function textBox() {
-    var li = document.createElement('li');
-    var ul = document.getElementById('myUl');
-    var input = document.getElementById('input');
-    li.setAttribute('id', input.value);
-    li.appendChild(document.createTextNode('USER: ' + input.value));
-    ul.appendChild(li);
-    //SEND TO REAL CONSOLE...
-    eval(input.value)
-    // console.log(`this is the code as a string ${input.value}`);
-};
 //----------------END------------------------------//
-function endFunction(){
-    if (num === 4) {
-        message.textContent = 'YAY! Now we can start the game!';
-        start.innerHTML = 'START GAME!';
-        // console.log('GAME END');
-    }
-};
