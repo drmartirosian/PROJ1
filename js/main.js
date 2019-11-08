@@ -31,7 +31,7 @@ function lvlOne(){
     }
 };
 function lvlTwo(){
-    if (num === 2) {
+    if (num === 2) { 
         // console.log('LVL2 FIRED');
         message.textContent = 'LEVEL 2: Make it stop!!!';
         start.innerHTML = ':(';
