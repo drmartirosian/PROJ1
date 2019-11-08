@@ -36,7 +36,7 @@ function lvlTwo(){
         message.textContent = 'LEVEL 2: Make it stop!!!';
         start.innerHTML = ':(';
         document.getElementById('start').style.opacity = 1;
-    }
+    } 
 };
 function lvlThree(){
     if (num === 3) {
