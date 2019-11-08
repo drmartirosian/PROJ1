@@ -14,7 +14,7 @@ function init(){
 }
 function render() {
     displayEl.textContent = num;
-    lvlOne();
+    lvlOne(); 
     lvlTwo();
     lvlThree();
     endFunction()
