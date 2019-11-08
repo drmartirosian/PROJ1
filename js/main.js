@@ -18,7 +18,7 @@ function render() {
     lvlTwo();
     lvlThree();
     endFunction()
-}
+} 
 init();
 //---------------LEVEL FUNCTIONS-------------------//
 function lvlOne(){
